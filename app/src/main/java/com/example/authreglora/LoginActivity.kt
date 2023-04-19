@@ -26,7 +26,9 @@ class LoginActivity : AppCompatActivity() {
         }
 
         CreateAccountButton.setOnClickListener {
+            Toast.makeText(this, "Account created successfully!", Toast.LENGTH_SHORT).show()
             var gotoaccount = Intent(this,MainActivity::class.java)
+            startActivity(gotoaccount)
         }
     }
 }
