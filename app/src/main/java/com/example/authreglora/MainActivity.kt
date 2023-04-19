@@ -1,5 +1,6 @@
 package com.example.authreglora
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity() {
 
         ButtonAccount.setOnClickListener {
             Toast.makeText(this, "Account created successfully!", Toast.LENGTH_SHORT).show()
+            var gotologin = Intent(this,LoginActivity::class.java)
+            startActivity(gotologin)
         }
+
 
 //        ButtonAccount.setOnClickListener {
 //            Toast.makeText(this, "Hi, Lora :)", Toast.LENGTH_SHORT).show()
